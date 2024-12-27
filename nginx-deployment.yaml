@@ -25,5 +25,5 @@ spec:
       volumes:
       - name: html-config
         configMap:
-          name: nginx-html-config  # Mount the ConfigMap as a directory
+          name: nginx-html-config-v2  # Mount the ConfigMap as a directory
 
