@@ -8,7 +8,7 @@ data:
     <head><title>ArgoCD Test</title></head>
     <body>
       <h1>Welcome to NGINX Web Server</h1>
-      <p>This is version 1 of the webpage.</p>
+      <p>This is version 2 of the webpage.</p>
     </body>
     </html>
 
