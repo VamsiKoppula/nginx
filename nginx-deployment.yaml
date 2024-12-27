@@ -21,12 +21,9 @@ spec:
         - containerPort: 80
         volumeMounts:
         - name: html-config
-          mountPath: /usr/share/nginx/html/index.html  # Mounting the file correctly
+          mountPath: /usr/share/nginx/html  # Mount ConfigMap as a directory here
       volumes:
       - name: html-config
         configMap:
-          name: nginx-html-config
-          items:
-          - key: index.html  # Only mount the specific file from the ConfigMap
-            path: index.html  # Mount it directly as a file
+          name: nginx-html-config  # Mount the ConfigMap as a directory
 
