@@ -5,11 +5,11 @@ metadata:
   labels:
     app: nginx
 spec:
-  type: ClusterIP
+  type: LoadBalancer  # Exposes the service externally via a LoadBalancer
   selector:
     app: nginx
   ports:
   - protocol: TCP
-    port: 80
-    targetPort: 80
+    port: 80          # External port
+    targetPort: 80     # Internal port where NGINX is running
 

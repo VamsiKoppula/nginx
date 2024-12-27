@@ -5,7 +5,7 @@ metadata:
   labels:
     app: nginx
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: nginx
@@ -19,4 +19,12 @@ spec:
         image: nginx:1.21.6 # Public image from Docker Hub
         ports:
         - containerPort: 80
+        volumeMounts:
+        - name: html-config
+          mountPath: /usr/share/nginx/html
+          subPath: index.html
+      volumes:
+      - name: html-config
+        configMap:
+          name: nginx-html-config
 
